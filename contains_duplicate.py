@@ -5,6 +5,9 @@ class Solution:
          numsToSet = set(nums)
          return False if len(list(numsToSet)) == numsLength else True
 
+# Time Complexity of Solution 1 - O(n) + O(n) = O(n)
+# Space Complexity of Solution 1 - O(n)
+
 
 # Solution 2:
 class Solution:
@@ -15,3 +18,6 @@ class Solution:
                 return True
             hashSet.add(num)
         return False
+
+# Time Complexity of Solution 1 - O(n) + O(n) = O(n)
+# Space Complexity of Solution 1 - O(n)
