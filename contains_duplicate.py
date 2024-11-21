@@ -19,5 +19,5 @@ class Solution:
             hashSet.add(num)
         return False
 
-# Time Complexity of Solution 1 - O(n) + O(n) = O(n)
-# Space Complexity of Solution 1 - O(n)
+# Time Complexity of Solution 2 - O(n) + O(n) = O(n)
+# Space Complexity of Solution 2 - O(n)
