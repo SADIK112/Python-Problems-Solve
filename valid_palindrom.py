@@ -9,24 +9,30 @@ class Solution:
           return True
       return False
 
-def isPalindrome(s):
-    p = len(s) - 1
+# Time Complexity of Solution 1 - O(n)
+# Space Complexity of Solution 1 - O(n)
 
-    for char in s:
-        print("char", char)
-        print("last", s[p])
-        
-        if not char.isalnum():
-            continue
-        
-        if not s[p].isalnum():
-            p -= 1
-        print("---")
-        if char.lower() == s[p].lower():
-            p -= 1
-        else: 
-            return False
+# Solition 2:
 
-    return True
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        p = len(s) - 1
+
+        for char in s:
+            if s[p] == " ":
+                p -= 1
+            
+            if not char.isalnum() or len(char) == 0:
+                continue
+
+            if not s[p].isalnum():
+                p -= 1
+            if char.lower() == s[p].lower():
+                p -= 1
+            else: 
+                return False
+
+        return True
         
-    
+# Time Complexity of Solution 1 - O(n)
+# Space Complexity of Solution 1 - O(1)
