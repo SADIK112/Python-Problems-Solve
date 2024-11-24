@@ -27,3 +27,6 @@ class Solution:
                         L += 1
 
         return res
+
+# Time Complexity of Solution - O(nlong) + O(n^2) = O(n^2)
+# Space Complexity of Solution - O(n)
