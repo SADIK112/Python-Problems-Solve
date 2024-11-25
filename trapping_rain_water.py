@@ -27,3 +27,28 @@ class Solution:
 
 # Time Complexity of Solution 1 - O(n) + O(n) + O(n) = O(n)
 # Space Complexity of Solution 1 - O(n)
+
+# Solution 2:
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        if not height:
+            return 0
+        l, r = 0, len(height) - 1
+        maxL, maxR = height[l], height[r]
+        res = 0
+
+        while l < r:
+            if maxL < maxR:
+                l += 1
+                maxL = max(maxL, height[l])
+                diff = maxL - height[l]
+                res += diff
+            else:
+                r -= 1
+                maxR = max(maxR, height[r])
+                diff = maxR - height[r]
+                res += diff
+        return res
+
+# Time Complexity of Solution 1 - O(n)
+# Space Complexity of Solution 1 - O(1)
